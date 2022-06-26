@@ -17,7 +17,7 @@ class LaptopsController < ApplicationController
 	def create
 		@laptop = Laptop.new(laptop_params)
 		if @laptop.save
-			redirect_to "/laptops/show_laptop/#{@laptop.id}"
+			redirect_to "/laptops/show_laptop/#{@laptop.id}",notice: "created successfully."
 		else
 			render :new
 		end

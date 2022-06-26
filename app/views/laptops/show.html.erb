@@ -1,5 +1,10 @@
 <h1>  Details of laptop </h1>
 
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 
  <h2> <strong> Name :</strong> <i> <%= @laptop.name %> </i></h2>
  <h2> <strong> Name :</strong> <i> <%= @laptop.model %> </i></h2>
