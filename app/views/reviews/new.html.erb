@@ -1,0 +1,19 @@
+<h1>  New Reviews</h1>
+
+
+
+<%= form_with model: @review, url:"/create_review" do |form|%>
+<div>
+	<%= form.label :title %><br>
+	<%= form.text_field :title%><br> 
+</div>
+<div>
+	<%= form.label :comment%><br>
+	<%= form.text_area :comment%><br>
+</div>
+
+<div>
+	<%= form.submit "save" %><br>
+</div>
+
+<% end %>

@@ -4,14 +4,23 @@
 <div>
 	<%= form.label :name %><br>
 	<%= form.text_field :name%><br>
+	<% @laptop.errors.full_messages_for(:name).each do |message| %>
+      <div style="color:red;"><%= message %></div><br>
+    <% end %>
 </div>
 <div>
 	<%= form.label :model%><br>
 	<%= form.number_field :model%><br>
+	<% @laptop.errors.full_messages_for(:model).each do |message| %>
+      <div style="color:red;"><%= message %></div><br>
+    <% end %>
 </div>
 <div>
 	<%= form.label :configuration %><br>
 	<%= form.text_area :configuration%><br>
+	<% @laptop.errors.full_messages_for(:model).each do |message| %>
+      <div style="color:red;"><%= message %></div><br>
+    <% end %>
 </div>
 
 <div>

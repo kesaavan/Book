@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   patch "/laptops/update_laptop/:id", to: "laptops#update"
   get "/laptops/delete_laptop/:id", to: "laptops#delete"
 
- get "/users/index", to: "user#index"
+  get "/users/index", to: "user#index"
   get "/users/new", to: "user#new"
   get "/users/show_user/:id", to: "user#show"
   post "/create_user", to: "user#create"
@@ -25,6 +25,15 @@ Rails.application.routes.draw do
   patch "/users/update_user/:id", to: "user#update"
   get "/users/delete_user/:id", to: "user#delete"
 
+  get "/consumer/new", to: "consumers#new"
+  get "/consumer/show_consumer/:id", to: "consumers#show"
+  post "/create_consumer", to: "consumers#create"
 
+  get "/review/new", to: "reviews#new"
+  get "/review/show_review/:id", to: "reviews#show"
+  post "/create_review", to: "reviews#create"
 
+  get "/shop/new", to: "shops#new"
+  get "/shop/show_shop/:id", to: "shops#show"
+  post "/create_shop", to: "shops#create"
 end
