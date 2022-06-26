@@ -1,0 +1,21 @@
+<h1> Edit the laptop </h1>
+
+<%= form_with model: @laptop, url:"/laptops/update_laptop/#{@laptop.id}" do |form|%>
+<div>
+	<%= form.label :name %><br>
+	<%= form.text_field :name%><br>
+</div>
+<div>
+	<%= form.label :model%><br>
+	<%= form.number_field :model%><br>
+</div>
+<div>
+	<%= form.label :configuration %><br>
+	<%= form.text_area :configuration%><br>
+</div>
+
+<div>
+	<%= form.submit "update" %><br>
+</div>
+
+<% end %>

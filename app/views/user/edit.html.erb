@@ -1,0 +1,21 @@
+<h1>  Edit User</h1>
+
+<%= form_with model: @user,url: "/users/update_user/#{@user.id}" do |form| %>
+<div>
+	<%= form.label :name %><br>
+	<%= form.text_field :name%><br>
+</div>
+<div>
+	<%= form.label :start_date%><br>
+	<%= form.date_field :start_date%><br>
+</div>
+<div>
+	<%= form.label :end_date %><br>
+	<%= form.date_field :end_date%><br>
+</div>
+
+<div>
+	<%= form.submit "update" %><br>
+</div>
+
+<% end %>

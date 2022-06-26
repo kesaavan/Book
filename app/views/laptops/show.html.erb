@@ -1,0 +1,10 @@
+<h1>  Details of laptop </h1>
+
+
+ <h2> <strong> Name :</strong> <i> <%= @laptop.name %> </i></h2>
+ <h2> <strong> Name :</strong> <i> <%= @laptop.model %> </i></h2>
+ <h2> <strong> Name :</strong> <i> <%= @laptop.configuration %> </i></h2>
+
+ <%= link_to "Back to index", root_path %>
+
+ <%= link_to "Edit laptop",  url:"/laptops/edit_laptop/:id" %>

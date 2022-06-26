@@ -1,0 +1,24 @@
+<h1>   Index Page of Laptops</h1>
+
+
+<ul>
+	<% @laptops.each do |laptop| %>
+		<table width= '300'>
+			<tr>
+				<td><h2> <%= laptop.name %> </h2></td>
+				<td><a href= "/laptops/show_laptop/<%= laptop.id %>"> Show</a></td>
+				<td><a href= "/laptops/edit_laptop/<%= laptop.id %>"> Edit</a></td>
+				<td><a href= "/laptops/delete_laptop/<%= laptop.id %>"> Delete</a></td>
+			</tr>
+	
+		</table>
+	<% end %>
+</ul>
+
+
+
+<h2> <%= link_to "New Laptop", laptops_new_path %> </h2><br>
+
+<h2> <%= link_to "User Index", users_index_path %> </h2>
+
+<h2> <%= link_to "New User", users_new_path  %> </h2>

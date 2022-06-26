@@ -1,0 +1,22 @@
+<h1>   Index Page of Users</h1>
+
+
+<ul>
+	<% @users.each do |user| %>
+		<table width= '300'>
+			<tr>
+				<td><h2> ><%= user.name %> </h2></td>
+				<td><a href= "/users/show_user/<%= user.id %>"> Show </a></td>
+				<td><a href= "/users/edit_user/<%= user.id %>">Edit</a></td>
+				<td><a href= "/users/delete_user/<%= user.id %>">Delete</a></td>
+			</tr>
+		</table>
+	<% end %>
+</ul>
+
+
+<h2> <%= link_to "New User", users_new_path  %> </h2>
+
+<h2> <%= link_to "Back to Laptop index", root_path %></h2>
+
+
